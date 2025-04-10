@@ -9,7 +9,7 @@ CodeForces, CodeChef, LeetCode, AtCoder and GeeksforGeeks.
 
 ## How it works:
 - The Home Page displays all upcoming contests.
-On the Contests Page, users can:
+- On the Contests Page, users can:
 - Filter contests by selected platforms
 - View ongoing and upcoming contests
 - Click the calendar icon to save contest date and time
