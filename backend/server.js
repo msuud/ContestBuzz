@@ -8,7 +8,8 @@ require("dotenv").config();
 const app = express();
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://your-vercel-domain.vercel.app",
+  "https://contest-buzz.vercel.app/",
+  "https://contest-buzz-urvas-projects.vercel.app/"
 ];
 app.use(
   cors({
