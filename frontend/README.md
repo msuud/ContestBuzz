@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# ContestBuzz - Your Personal Competitive Programming Notifier
+With multiple contests happening across various platforms, staying updated and prepared can be a hassle for competitive programmers.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ContestBuzz is a smart contest tracking and notification platform that helps users stay informed about upcoming and ongoing coding contests across popular competitive programming websites — all in one place.
 
-## Available Scripts
+## Contest Aggregation & Notification System
+We used the Clist.by API to fetch real-time contest data from 5 major competitive programming platforms:
+CodeForces, CodeChef, LeetCode, AtCoder and GeeksforGeeks.
 
-In the project directory, you can run:
+## How it works:
+- The Home Page displays all upcoming contests.
+- On the Contests Page, users can:
+- Filter contests by selected platforms
+- View ongoing and upcoming contests
+- Click the calendar icon to save contest date and time
+- Click "Notify Me" to receive an email alert 1 hour before the contest starts
 
-### `npm start`
+## Tech Stack
+- Frontend – React.js
+- Backend – Node.js (Express)
+- Database – Firebase
+- Email Notification – Twilio SendGrid
+- API Integration – Clist.by
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## How to Use :
+1. Clone the Repository
+2. Install Dependencies using "npm install".
+3. Set up Environment Variables - Create a .env file in the root folder with API keys (Clist.by, Firebase, SendGrid).
+4. Run the Application using "npm start".
+5. Also run the server.js file using "node server.js".
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Screenshots for Preview :
+![Screenshot 2025-04-10 224152](https://github.com/user-attachments/assets/9c40d43e-0a62-4385-891c-e86e8b8db740)
+![Screenshot 2025-04-10 224240](https://github.com/user-attachments/assets/d33642ac-9b07-4e70-878b-ba6e25cc39d0)
+![Screenshot 2025-04-10 224318](https://github.com/user-attachments/assets/1515e42f-91e0-491d-a373-2b8daea42336)
+![Screenshot 2025-04-10 224309](https://github.com/user-attachments/assets/7235eb3a-8616-415e-b731-4ddad04171dd)
+![Screenshot 2025-04-10 224335](https://github.com/user-attachments/assets/1b9fc077-a33e-41cc-b85e-b20429b43c7e)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
