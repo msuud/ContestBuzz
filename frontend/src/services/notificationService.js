@@ -1,14 +1,13 @@
 import { toast } from "react-toastify";
 
-const API_URL = process.env.REACT_APP_API_URL;
+const BASE_URL = process.env.REACT_APP_API_URL;
+console.log("BACKEND_URL =", process.env.REACT_APP_API_URL);
 
 export const scheduleNotification = async (userId, userEmail, contest) => {
   try {
-    const response = await fetch(`${API_URL}/notify`, {
+    const response = await fetch(`${BASE_URL}/api/notify`, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         userId,
         userEmail,
@@ -19,7 +18,7 @@ export const scheduleNotification = async (userId, userEmail, contest) => {
       }),
     });
 
-    const data = await response.json();
+    const data = await response.json(); // << You forgot this earlier
 
     if (data.success) {
       toast.success("Notification set successfully!");
@@ -37,15 +36,10 @@ export const scheduleNotification = async (userId, userEmail, contest) => {
 
 export const cancelNotification = async (userId, contestId) => {
   try {
-    const response = await fetch(`${API_URL}/cancel-notify`, {
+    const response = await fetch(`${BASE_URL}/api/cancel-notify`, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        userId,
-        contestId,
-      }),
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ userId, contestId }),
     });
 
     const data = await response.json();
