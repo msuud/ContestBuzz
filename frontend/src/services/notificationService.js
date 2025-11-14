@@ -1,6 +1,6 @@
 import { toast } from "react-toastify";
 
-const API_URL = "http://localhost:3001/api";
+const API_URL = process.env.REACT_APP_API_URL;
 
 export const scheduleNotification = async (userId, userEmail, contest) => {
   try {
