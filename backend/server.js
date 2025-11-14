@@ -6,7 +6,17 @@ const bodyParser = require("body-parser");
 require("dotenv").config();
 
 const app = express();
-app.use(cors());
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://your-vercel-domain.vercel.app",
+];
+app.use(
+  cors({
+    origin: allowedOrigins,
+    methods: ["GET", "POST"],
+    credentials: true,
+  })
+);
 app.use(bodyParser.json());
 
 const notificationJobs = new Map();

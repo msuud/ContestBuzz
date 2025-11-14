@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL, 
+  baseURL: process.env.REACT_APP_API_URL,
   timeout: 20000,
   headers: {
     "Content-Type": "application/json",
@@ -32,7 +32,7 @@ api.interceptors.response.use(
 
 export const fetchContestsFromBackend = async () => {
   try {
-    const res = await api.get("/api/clist/contests"); 
+    const res = await api.get("/api/clist/contests");
     return res.data?.data ?? null;
   } catch (err) {
     console.error("Failed to fetch contests from backend:", err);
@@ -84,7 +84,7 @@ const mockAPI = {
         id: `ongoing-${i}`,
         name: `Ongoing Contest ${i + 1}`,
         platform: platforms[Math.floor(Math.random() * platforms.length)],
-        url: `https://example.com/contest/ongoing-${i}`, 
+        url: `https://example.com/contest/ongoing-${i}`,
         start_time: startTime.toISOString(),
         end_time: endTime.toISOString(),
         duration: (endTime - startTime) / (1000 * 60 * 60),
