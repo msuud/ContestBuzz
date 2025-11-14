@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 const username = "urvadave2";
-const apiKey = process.env.REACT_APP_CLIST_API_KEY;
+const apiKey = process.env.CLIST_API_KEY;
 const clistApiUrl = "https://clist.by/api/v1/contest/";
 
 const platforms = [
