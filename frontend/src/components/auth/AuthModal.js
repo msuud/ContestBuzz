@@ -14,7 +14,7 @@ const gradientAnimation = keyframes`
 const BulletList = styled.ul`
   margin-top: 1.5rem;
   padding-left: 1.2rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 1.7;
   color: white;
   opacity: 0.97;
